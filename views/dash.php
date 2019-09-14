@@ -53,7 +53,7 @@
             <img src="<?php foreach ($array_usuarios as $row) {
               echo $row['imgUsuario'];
             }?>" alt="" class="rounded-circle shadow-lg bg-white" width="200px" height="200px">
-            <a href="#">
+            <a href="editProfile.php">
               <div class="edit-img text-center"><br>
                   <i data-feather="edit" class="mt-5"></i><br>
                   Cambiar
@@ -63,6 +63,26 @@
         </section>
         <div class="container">
           <br><br><br><br>
+          <div class="container px-5">
+            <h2>Tu Informacion</h2>
+            <div class="ml-4 w-50 lead">
+              <?php
+
+              foreach($array_usuarios as $row) {
+                echo 'Nombre: ' . $row['nombreUsuario'] . ' ' . $row['apellidosUsuario'] .'<br>';
+                echo 'Email: ' . $row['emailUsuario'] . '<br>';
+                echo 'Edad: ' . $row['edadUsuario'] . '<br>';
+                echo 'Telefono: ' . $row['telefonoUsuario'] . '<br>';
+                echo 'Profesion: ' . $row['profesion'] . '<br>';
+                echo 'Experiencia: ' . $row['experienciaUsuario'] . '<br>';
+                echo 'Perfil Profesional: ' . $row['descripcionUsuario'] . '<br>';
+              }
+
+              echo 'Rol: ' . $_SESSION['rol'] . '<br>';
+              ?>
+              <a href="editProfile.php" class="btn btn-warning"><i data-feather="edit"></i></a><a href="editProfile.php" class="btn btn-danger mx-2"><i data-feather="x-circle"></i></a>
+            </div>
+          </div><br>
           <h2 class="text-center">Usuarios</h2>
           <div class="row d-flex align-items-center justify-content-center">
             <?php
