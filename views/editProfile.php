@@ -27,9 +27,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="<?php
-            if($_SESSION['rol'] == 0){
+            if($_SESSION['rol'] == 'Admin'){
               echo 'dash.php';
-            }elseif ($_SESSION['rol'] == 1) {
+            }elseif ($_SESSION['rol'] == 'User') {
               echo 'home.php';
             }?>"
             >WorkPlace</a>
@@ -120,6 +120,9 @@
                   <div class="form-group col-md-6">
                     <label for="inputProfesion">Profesion</label>
                     <input type="text" id="inputProfesion" class="form-control" name="profesion" value="<?php foreach ($array_usuarios as $row) {echo $row['profesion'];}?>">
+                    <?php
+                      echo $_SESSION['rol']
+                    ?>
                   </div>
                   <div class="form-group col-md-6">
                         <label for="text-area">Perfil Profesional</label>

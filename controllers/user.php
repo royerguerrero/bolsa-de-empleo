@@ -83,7 +83,7 @@
       unset ($SESSION['usuario']);
       session_destroy();
 
-      header('Location: ../public/landing.html');
+      header('Location: ../public/landing.php');
     }
 
       public function eliminarCuenta(){
@@ -103,9 +103,9 @@
         if ($this->conn->query($sql) === TRUE) {
           echo "Record updated successfully";
           session_start();
-          if ($_GET['rol'] == 0) {
+          if ($_SESSION['rol'] == 'Admin') {
             header('Location: ../views/dash.php');
-          }elseif($_GET['rol'] == 1){
+          }elseif($_SESSION['rol'] == 'User'){
             header('Location: ../views/home.php');
           }
 
