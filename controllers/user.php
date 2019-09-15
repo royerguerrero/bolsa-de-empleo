@@ -93,6 +93,7 @@
           echo "Record deleted successfully";
           header('Location: ../public/landing.php');
         } else {
+          header('Location: ../views/editProfile.php?mensaje=No se pudo borrar tu cuenta');
           echo "Error deleting record: " . $conn->error;
         }
       }
@@ -145,12 +146,14 @@
         if ($_FILES["fileToUpload"]["size"] > 500000) {
           echo "Sorry, your file is too large.";
           $uploadOk = 0;
+          header('Location: ../views/editProfile.php?mensaje=Lo sentimos el arrivo es muy grande');
         }
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
           echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
           $uploadOk = 0;
+          header('Location: ../views/editProfile.php?mensaje=Lo sentimos el formato no se admite, debe ser una imegen');
         }
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
@@ -163,11 +166,13 @@
 
             if ($this->conn->query($sql) === TRUE) {
               echo "Record updated successfully";
+              header('Location: ../views/editProfile.php');
             } else {
               echo "Error updating record: " . $this->conn->error;
             }
           } else {
             echo "Sorry, there was an error uploading your file.";
+            header('Location: ../views/editProfile.php?mensaje=Lo sentimos no se puede subir el archivo');
           }
         }
       }

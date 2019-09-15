@@ -63,6 +63,16 @@
           <br><br><br><br>
           <h2>Tu Informacion</h2>
           <div>
+            <?php
+            if(isset($_GET['mensaje'])){
+              echo '<div class="alert alert-danger alert-dismissible fade show w-75" role="alert">' . " <strong>Oh no! </strong>"
+              . $_GET['mensaje'] .
+              '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+              </div>';
+            }
+            ?>
             <form class="" action="../controllers/user.php?action=cambiarImagen&cuenta=<?php foreach ($array_usuarios as $row) {echo $row['emailUsuario'];}?>" method="post" enctype="multipart/form-data">
               <div class="input-group mb-3">
                 <div class="custom-file">
@@ -75,16 +85,6 @@
               </div>
             </form>
             <form method="post" action="../controllers/user.php?action=actualizarUsuario&cuenta=<?php foreach ($array_usuarios as $row) {echo $row['emailUsuario'];}?>"><br>
-                <?php
-                if(isset($_GET['mensaje'])){
-                  echo '<div class="alert alert-danger alert-dismissible fade show w-75" role="alert">' . " <strong>Oh no! </strong>"
-                  . $_GET['mensaje'] .
-                  '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-                  </div>';
-                }
-                ?>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputnombre">Nombre</label>
