@@ -89,8 +89,9 @@
       public function eliminarCuenta(){
         $sql = "DELETE FROM usuarios WHERE emailUsuario = '". $_GET["cuenta"] ."'";
 
-        if ($conn->query($sql) === TRUE) {
+        if ($this->conn->query($sql) === TRUE) {
           echo "Record deleted successfully";
+          header('Location: ../public/landing.php');
         } else {
           echo "Error deleting record: " . $conn->error;
         }

@@ -80,35 +80,35 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputnombre">Nombre</label>
                                     <input type="text" class="form-control" id="inputnombre" placeholder="Nombre"
-                                        name="nombre">
+                                        name="nombre" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputApellido">Apellido</label>
-                                    <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="apellido">
+                                    <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="apellido" required>
                                 </div>
                             </div>
                             <div class="form-row">
                               <div class="form-group col-md-9">
                                 <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@mail.com" name="email">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@mail.com" name="email" required>
                               </div>
                               <div class="form-group col-md-3">
                                 <label for="inputEdad">Edad</label>
-                                <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200">
+                                <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200" required>
                               </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputContraseña">Contraseña</label>
-                                <input type="password" class="form-control" id="inputContraseña" placeholder="•••••••••••" name="pass">
+                                <input type="password" class="form-control" id="inputContraseña" placeholder="•••••••••••" name="pass" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputTelefono">Telefono</label>
-                                    <input type="tel" class="form-control" id="inputTelefono" name="tel" placeholder="+57 COLOMBIA">
+                                    <input type="tel" class="form-control" id="inputTelefono" name="tel" placeholder="+57 COLOMBIA" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputTipoDeProfesion">Tipo de Profesion</label>
-                                    <select id="inputTipoDeProfesion" class="form-control" name="tipoProfesion">
+                                    <select id="inputTipoDeProfesion" class="form-control" name="tipoProfesion" required>
                                         <option selected>Elegir...</option>
                                         <?php
                                         foreach ($array_tipoProfesiones as $row) {
@@ -121,11 +121,11 @@
                             <div class="form-row">
                               <div class="form-group col-md-6">
                                 <label for="inputProfesion">Profesion</label>
-                                <input type="text" id="inputProfesion" class="form-control" name="profesion">
+                                <input type="text" id="inputProfesion" class="form-control" name="profesion" required>
                               </div>
                               <div class="form-group col-md-6">
                                 <label for="inputRol">Rol</label>
-                                <select id="inputRol" class="form-control" name="rol">
+                                <select id="inputRol" class="form-control" name="rol" required>
                                   <option selected>Elegir...</option>
                                   <?php
                                   foreach ($array_roles as $row) {
@@ -151,7 +151,7 @@
                             </div><br>
 
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" required>
                               <label class="form-check-label" for="inlineCheckbox1">Acepto Terminos y condiciones</label>
                             </div>
                             <br><br>

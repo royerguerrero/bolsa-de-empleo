@@ -93,40 +93,40 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputApellido">Apellido</label>
-                        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="apellido" value="<?php foreach ($array_usuarios as $row) {echo $row['apellidosUsuario'];}?>">
+                        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" name="apellido" value="<?php foreach ($array_usuarios as $row) {echo $row['apellidosUsuario'];}?>" required>
                     </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-9">
                     <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@mail.com" name="email" value="<?php foreach ($array_usuarios as $row) {echo $row['emailUsuario'];}?>">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@mail.com" name="email" value="<?php foreach ($array_usuarios as $row) {echo $row['emailUsuario'];}?>" required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="inputEdad">Edad</label>
-                    <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200" value="<?php foreach ($array_usuarios as $row) {echo $row['Edad'];}?>">
+                    <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200" value="<?php foreach ($array_usuarios as $row) {echo $row['Edad'];}?>" required>
                   </div>
                 </div>
                 <div class="form-group">
                     <label for="inputContraseña">Contraseña</label>
-                    <input type="password" class="form-control" id="inputContraseña" placeholder="Pon tu nueva Contraseña" name="pass" value="<?php foreach ($array_usuarios as $row) {echo $row['passUsuario'];}?>">
+                    <input type="password" class="form-control" id="inputContraseña" placeholder="Pon tu nueva Contraseña" name="pass" value="<?php foreach ($array_usuarios as $row) {echo $row['passUsuario'];}?>" required>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputTelefono">Telefono</label>
-                        <input type="tel" class="form-control" id="inputTelefono" name="tel" placeholder="+57 COLOMBIA" value="<?php foreach ($array_usuarios as $row) {echo $row['telefonoUsuario'];}?>">
+                        <input type="tel" class="form-control" id="inputTelefono" name="tel" placeholder="+57 COLOMBIA" value="<?php foreach ($array_usuarios as $row) {echo $row['telefonoUsuario'];}?>" required>
                     </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputProfesion">Profesion</label>
-                    <input type="text" id="inputProfesion" class="form-control" name="profesion" value="<?php foreach ($array_usuarios as $row) {echo $row['profesion'];}?>">
+                    <input type="text" id="inputProfesion" class="form-control" name="profesion" value="<?php foreach ($array_usuarios as $row) {echo $row['profesion'];}?>" required>
                     <?php
                       echo $_SESSION['rol']
                     ?>
                   </div>
                   <div class="form-group col-md-6">
                         <label for="text-area">Perfil Profesional</label>
-                        <textarea class="form-control" id="text-area" rows="5" name="pro-perfil" ><?php foreach ($array_usuarios as $row) {echo $row['descripcionUsuario'];}?></textarea>
+                        <textarea class="form-control" id="text-area" rows="5" name="pro-perfil" required><?php foreach ($array_usuarios as $row) {echo $row['descripcionUsuario'];}?></textarea>
                   </div>
                 </div>
 
