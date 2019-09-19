@@ -2,7 +2,7 @@
 
   require '../models/conexion.php';
 
-  class Usuario extends Conecxion{
+  class Usuario extends Conexion{
 
     public $usuario;
 
@@ -87,15 +87,16 @@
     }
 
       public function eliminarCuenta(){
-        $sql = "DELETE FROM usuarios WHERE emailUsuario = '". $_GET["cuenta"] ."'";
+        echo "<script>confirm('Seguro que quieres eliminar tu cuenta')</script>";
+            $sql = "DELETE FROM usuarios WHERE emailUsuario = '". $_GET["cuenta"] ."'";
 
-        if ($this->conn->query($sql) === TRUE) {
-          echo "Record deleted successfully";
-          header('Location: ../public/landing.php');
-        } else {
-          header('Location: ../views/editProfile.php?mensaje=No se pudo borrar tu cuenta');
-          echo "Error deleting record: " . $conn->error;
-        }
+            if ($this->conn->query($sql) === TRUE) {
+              echo "Record deleted successfully";
+              header('Location: ../public/landing.php');
+            } else {
+              header('Location: ../views/editProfile.php?mensaje=No se pudo borrar tu cuenta');
+              echo "Error deleting record: " . $conn->error;
+            }
       }
 
       public function actualizarUsuario(){
@@ -134,6 +135,8 @@
             $uploadOk = 1;
           } else {
             echo "File is not an image.";
+            header('Location: ../views/editProfile.php?mensaje=No se pudo subir ti imagen, es posible que sea muy grande');
+
             $uploadOk = 0;
           }
         }
@@ -146,7 +149,7 @@
         if ($_FILES["fileToUpload"]["size"] > 500000) {
           echo "Sorry, your file is too large.";
           $uploadOk = 0;
-          header('Location: ../views/editProfile.php?mensaje=Lo sentimos el arrivo es muy grande');
+          header('Location: ../views/editProfile.php?mensaje=Lo sentimos el archivo es muy grande');
         }
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -168,6 +171,7 @@
               echo "Record updated successfully";
               header('Location: ../views/editProfile.php');
             } else {
+              header('Location: ../views/editProfile.php?mensaje=Error al subir tu foto');
               echo "Error updating record: " . $this->conn->error;
             }
           } else {

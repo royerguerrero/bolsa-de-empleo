@@ -2,11 +2,11 @@
 
   require 'config.php';
 
-  class Conecxion{
+  class Conexion{
 
     protected $conn;
 
-    public function Conecxion(){
+    public function Conexion(){
       $this->conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
         if ($this->conn->connect_error) {

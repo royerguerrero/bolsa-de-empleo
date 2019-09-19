@@ -2,7 +2,7 @@
 
   require '../models/conexion.php';
 
-  class Profesiones extends Conecxion{
+  class Profesiones extends Conexion{
 
     public function Profesiones(){
       parent::__construct();

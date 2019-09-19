@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <title>WorkPlace</title>
   </head>

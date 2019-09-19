@@ -18,7 +18,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css"><link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <title>WorkPlace</title>
 </head>
@@ -139,7 +139,7 @@
                             <label>Años de experiencia</label>
                             <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="experiencia" id="inlineRadio1" value="0">
-                              <label class="form-check-label" for="inlineRadio1">Ninguna</label>
+                              <label class="form-check-label" for="inlineRadio1" required>Ninguna</label>
                             </div>
                             <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="experiencia" id="inlineRadio2" value="1">

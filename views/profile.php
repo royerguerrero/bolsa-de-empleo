@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css"><link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <title>WorkPlace</title>
 </head>

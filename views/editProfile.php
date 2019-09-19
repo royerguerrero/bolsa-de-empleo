@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css"><link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <title>WorkPlace</title>
 </head>
@@ -103,7 +103,7 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for="inputEdad">Edad</label>
-                    <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200" value="<?php foreach ($array_usuarios as $row) {echo $row['Edad'];}?>" required>
+                    <input type="number" class="form-control" id="inputEdad" placeholder="13" name="edad" min="13" max="200" value="<?php foreach ($array_usuarios as $row) {echo $row['edadUsuario'];}?>" required>
                   </div>
                 </div>
                 <div class="form-group">
